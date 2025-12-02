@@ -2,11 +2,11 @@
 
 Este documento apresenta a minha versão atualizada do guia de estilo clássico do Object Pascal, originalmente elaborado por Charlie Calvert para a Borland na época do lançamento do Delphi.
 
-A linguagem Object Pascal é case-insensitive, característica que facilita a curva de aprendizado de iniciantes, pois, diferentemente de linguagens case-sensitive, o compilador Pascal é significativamente mais permissivo quanto à declaração da maioria dos tokens (tipos, variáveis, constantes etc.) que compõem um programa. Entretanto, essa mesma permissividade pode resultar em inconsistências visuais entre diferentes unidades, além de favorecer conflitos de nomenclatura causados por ambiguidade de tokens dentro de uma mesma unidade ou entre unidades distintas.
+A linguagem Object Pascal é case-insensitive, característica que facilita a curva de aprendizado de iniciantes, pois, diferentemente de linguagens case-sensitive, o compilador Pascal é significativamente mais permissivo quanto à declaração da maioria dos tokens (tipos, variáveis, constantes, etc.) que compõem um programa. Entretanto, essa mesma permissividade pode resultar em inconsistências visuais do mesmo código entre diferentes unidades, além de favorecer conflitos de nomenclatura causados por ambiguidade de tokens dentro de uma mesma unidade ou entre unidades distintas.
 
-Após mais de 25 anos de atuação profissional com Pascal (Object Pascal), defini um conjunto de regras de nomenclatura baseadas em prefixos e padrões estruturais que podem ser aplicadas a qualquer tipo de projeto Pascal.
+Após mais de 25 anos de atuação profissional com Object Pascal, defini um conjunto de regras de nomenclatura baseadas em prefixos e padrões estruturais que podem ser aplicadas a qualquer tipo de projeto Pascal.
 
-A adoção desses prefixos facilita o code completion da IDE, elimina praticamente todas as ambiguidades e melhora a organização geral do projeto.
+A adoção desses prefixos facilita o code completion da IDE, elimina praticamente todas as ambiguidades, melhora a legibilidade e a organização do projeto.
 
 ## Nomenclatura
 
@@ -57,12 +57,12 @@ acme
   bin
   doc
   src
-    foo
-      acme.foo.model.pas
-      acme.foo.controller.pas
     bar
       acme.bar.model.pas
       acme.bar.edit.form.pas
+    foo
+      acme.foo.model.pas
+      acme.foo.controller.pas
 ```
 
 ## Exemplos reais
