@@ -1,4 +1,4 @@
-# Pascal Naming Conventions
+# Pascal Guide
 
 Este documento apresenta a minha versão atualizada do guia de estilo clássico do Object Pascal, originalmente elaborado por Charlie Calvert para a Borland na época do lançamento do Delphi.
 
@@ -10,11 +10,11 @@ A adoção desses prefixos facilita o code completion da IDE, elimina praticamen
 
 ## Conteúdo
 
-* [Nomenclatura](#nomenclatura)
+* [Nomenclatura e Convenções](#nomenclatura-e-convenções)
 * [Estrutura](#estrutura)
 * [Desenvolvimento](#desenvolvimento)
 
-## Nomenclatura
+## Nomenclatura e Convenções
 
 ### Definições
 
@@ -26,8 +26,8 @@ A adoção desses prefixos facilita o code completion da IDE, elimina praticamen
 
 - **Units (Project Context Name)**: Acme.Foo.Model, Acme.Bar.Model, Acme.Foo.Controller, Acme.Bar.EditForm
 - **Interfaces (I Context Name)**: IFooModel, IBarModel, IFooController, IBarEditForm
-- **Tipos (T Context Name)**: TFooModel, TBarModel, TFooController, TBarEditForm
-- **Ponteiro (P Context Name)**: PFooModel, PBarModel, PFooController, PBarEditForm
+- **Types (T Context Name)**: TFooModel, TBarModel, TFooController, TBarEditForm
+- **Pointers (P Context Name)**: PFooModel, PBarModel, PFooController, PBarEditForm
 - **Fields (f Name)**: fModel, fController, fEditForm
 - **Arguments (a Name)**: aModel, aController, aEditForm
 - **Unit Variables (v Context Name)**: vFooModel, vBarModel, vFooController, vBarEditForm
