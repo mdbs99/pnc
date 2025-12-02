@@ -8,6 +8,12 @@ Após mais de 25 anos de atuação profissional com Object Pascal, defini um con
 
 A adoção desses prefixos facilita o code completion da IDE, elimina praticamente todas as ambiguidades, melhora a legibilidade e a organização do projeto.
 
+## Conteúdo
+
+* [Nomenclatura](#nomenclatura)
+* [Estrutura](#estrutura)
+* [Desenvolvimento](#desenvolvimento)
+
 ## Nomenclatura
 
 ### Definições
@@ -48,9 +54,15 @@ A adoção desses prefixos facilita o code completion da IDE, elimina praticamen
     function GetDataPointer(aNode: PVirtualNode): Pointer;
 ```
 
+### Linhas em branco
+
+Inserir linhas em branco dentro de um método é considerado um code smell. Isso geralmente indica que o método está assumindo responsabilidades em excesso — veja meu artigo sobre isso [aqui](https://objectpascalprogramming.com/posts/linhas-em-branco-no-metodo-e-mal-cheiro/).
+
+Evite pular linhas entre blocos de código.
+
 ### Exemplos
 
-Abaixo alguns links de projetos reais, em produção, que utilizam (em sua maioria) a nomenclatura descrita neste documento:
+A seguir estão alguns links para projetos reais, atualmente em produção, que adotam — em sua maioria — a nomenclatura e as convenções de codificação apresentadas neste documento:
 
 - **tis.ui.grid.core**: https://github.com/mdbs99/pltis_uicomponents/blob/master/src/standard/tis.ui.grid.core.pas
 
@@ -60,10 +72,33 @@ Abaixo alguns links de projetos reais, em produção, que utilizam (em sua maior
 
 A ordem de declaração das Unidades é muito importante, seja por uma questão visual e organizacional, mas também para informar ao compilador a ordem de procura dos tokens — veja meu artigo sobre isso [aqui](https://objectpascalprogramming.com/declarando-unidades).
 
-1. fpc/lazarus/delphi units
+1. fpc/lazarus, delphi units
 1. 3rd units
 1. my open source units
 1. project units
+
+### Exemplos
+
+```pascal
+uses
+  /// fpc/lazarus, delphi units
+  Windows,
+  Classes,
+  SysUtils,
+  Controls,
+  Math,
+  /// 3rd units
+  mormot.core.base,
+  mormot.core.data,
+  mormot.core.os,
+  /// my open source units
+  tisstrings,
+  /// project units
+  tis.core.os,
+  tis.core.utils,
+  tis.ui.grid.controls,
+  tis.ui.grid.chart;
+```
 
 ### Diretórios e Arquivos
 
