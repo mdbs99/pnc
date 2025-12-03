@@ -34,6 +34,8 @@ A adoção desses prefixos facilita o code completion da IDE, elimina praticamen
 - **Local Variables (v Name)**: vModel, vController, vEditForm
 - **Unit Constants (_ Context _ Name**): _FOO_VALUE, _BAR_VALUE, _FOO_BAR_VALUE
 - **Local Constants (_ Name**): _VALUE, _TOKEN_VALUE
+- **Local Functions (Name)**: IsValid, Execute
+- **Unit Functions (Context Name)**: FooIsValid, BarExecute
 - **Event Properties (On Name)**: OnEdit, OnCalculate
 - **Event Implementations (Do Name)**: DoEdit, DoCalculate
 
@@ -102,7 +104,8 @@ uses
 
 ### Diretórios e Arquivos
 
-- Todos os arquivos devem ser nomeados em letras minúsculas
+- Recomendo que os arquivos sejam nomeados em letras minúsculas, se o sistema será compilado em sistemas não-Windows.
+- Cada token que compõe o nome da Unidade deve ser separado por "." (em compiladores mais atuais) ou em PascalCase (em compiladores mais antigos, exemplo Delphi 6<)
 - Dentro de `src`, irão existir diretórios para cada Context; como esses diretórios são únicos, assim também será um Context por todo o projeto
 ```
 acme
