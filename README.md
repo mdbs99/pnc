@@ -46,6 +46,9 @@ A adoção desses prefixos facilita o code completion da IDE, elimina praticamen
 - **Unit Functions (Context Name)**: FooIsValid, BarExecute
 - **Event Properties (On Name)**: OnEdit, OnCalculate
 - **Event Implementations (Do Name)**: DoEdit, DoCalculate
+- **Enums**:
+  - {SCOPEDENUMS ON} TFooBar = (A, B, C)
+  - {SCOPEDENUMS OFF} TFooBar = (fbA, fbB, fbC)
 
 ### Comentários
 
