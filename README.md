@@ -26,26 +26,26 @@ A adoção desses prefixos facilita o code completion da IDE, elimina praticamen
 
 ### Definições
 
-- **Project**: nome do seu projeto
-- **Context**: Contexto único
-- **Name**: Nome/finalidade
+- **Project**: Nome do projeto
+- **Module**: Nome que deve ser único por projeto
+- **Function**: Nome que descreve uma funcionalidade
 
 ### Tokens
 
-- **Units (Project Context Name)**: Acme.Foo.Model, Acme.Bar.Model, Acme.Foo.Controller, Acme.Bar.EditForm
-- **Interfaces (I Context Name)**: IFooModel, IBarModel, IFooController, IBarEditForm
-- **Types (T Context Name)**: TFooModel, TBarModel, TFooController, TBarEditForm
-- **Pointers (P Context Name)**: PFooModel, PBarModel, PFooController, PBarEditForm
-- **Fields (f Name)**: fModel, fController, fEditForm
-- **Arguments (a Name)**: aModel, aController, aEditForm
-- **Unit Variables (v Context Name)**: vFooModel, vBarModel, vFooController, vBarEditForm
-- **Local Variables (v Name)**: vModel, vController, vEditForm
-- **Unit Constants (_ Context _ Name**): _FOO_VALUE, _BAR_VALUE, _FOO_BAR_VALUE
-- **Local Constants (_ Name**): _VALUE, _TOKEN_VALUE
-- **Local Functions (Name)**: IsValid, Execute
-- **Unit Functions (Context Name)**: FooIsValid, BarExecute
-- **Event Properties (On Name)**: OnEdit, OnCalculate
-- **Event Implementations (Do Name)**: DoEdit, DoCalculate
+- **Units (Project Module Function)**: Acme.Foo.Model, Acme.Bar.Model, Acme.Foo.Controller, Acme.Bar.EditForm
+- **Interfaces (I Module Function)**: IFooModel, IBarModel, IFooController, IBarEditForm
+- **Types (T Module Function)**: TFooModel, TBarModel, TFooController, TBarEditForm
+- **Pointers (P Module Function)**: PFooModel, PBarModel, PFooController, PBarEditForm
+- **Fields (f Function)**: fModel, fController, fEditForm
+- **Arguments (a Function)**: aModel, aController, aEditForm
+- **Unit Variables (v Module Function)**: vFooModel, vBarModel, vFooController, vBarEditForm
+- **Local Variables (v Function)**: vModel, vController, vEditForm
+- **Unit Constants (_ Module _ Function**): _FOO_VALUE, _BAR_VALUE, _FOO_BAR_VALUE
+- **Local Constants (_ Function**): _VALUE, _TOKEN_VALUE
+- **Local Functions (Function)**: IsValid, Execute
+- **Unit Functions (Module Function)**: FooIsValid, BarExecute
+- **Event Properties (On Function)**: OnEdit, OnCalculate
+- **Event Implementations (Do Function)**: DoEdit, DoCalculate
 - **Enums**:
   - {SCOPEDENUMS ON} TFooBar = (A, B, C)
   - {SCOPEDENUMS OFF} TFooBar = (fbA, fbB, fbC)
@@ -112,8 +112,7 @@ uses
 - Cada token que compõe o nome da Unidade deve ser separado por "." quando estiver utilizando compiladores mais novos, por exemplo: `acme.bar.model.pas`; para compiladores mais antigos (como Delphi 6 e anteriores), deve-se utilizar PascalCase, por exemplo: `AcmeBarModel.pas`
 
 #### Estrutura de Diretórios
-- Dentro de `src`, existirão diretórios correspondentes a cada Context
-- Como esses diretórios são únicos, cada Context também será único em todo o projeto, eliminando totalmente quaisquer ambiguidades que poderiam ocorrer ao utilizar múltiplas Unidades no mesmo projeto
+- Dentro de `src`, existirão diretórios correspondentes a cada Module
 ```
 acme
   bin
