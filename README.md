@@ -27,22 +27,22 @@ A adoção desses prefixos facilita o code completion da IDE, elimina praticamen
 ### Definições
 
 - **Project**: Nome do projeto
-- **Module**: Nome que deve ser único por projeto
+- **Domain**: Nome que deve ser único por projeto
 - **Function**: Nome que descreve uma funcionalidade
 
 ### Tokens
 
-- **Units (Project Module Function)**: Acme.Foo.Model, Acme.Bar.Model, Acme.Foo.Controller, Acme.Bar.EditForm
-- **Interfaces (I Module Function)**: IFooModel, IBarModel, IFooController, IBarEditForm
-- **Types (T Module Function)**: TFooModel, TBarModel, TFooController, TBarEditForm
-- **Pointers (P Module Function)**: PFooModel, PBarModel, PFooController, PBarEditForm
+- **Units (Project Domain Function)**: Acme.Foo.Model, Acme.Bar.Model, Acme.Foo.Controller, Acme.Bar.EditForm
+- **Interfaces (I Domain Function)**: IFooModel, IBarModel, IFooController, IBarEditForm
+- **Types (T Domain Function)**: TFooModel, TBarModel, TFooController, TBarEditForm
+- **Pointers (P Domain Function)**: PFooModel, PBarModel, PFooController, PBarEditForm
 - **Fields (f Function)**: fModel, fController, fEditForm
 - **Arguments (a Function)**: aModel, aController, aEditForm
-- **Global Variables (v Module Function)**: vFooModel, vBarModel, vFooController, vBarEditForm
+- **Global Variables (v Domain Function)**: vFooModel, vBarModel, vFooController, vBarEditForm
 - **Local Variables (v Function)**: vModel, vController, vEditForm
-- **Global Constants (_ Module _ Function**): _FOO_VALUE, _BAR_VALUE, _FOO_BAR_VALUE
+- **Global Constants (_ Domain _ Function**): _FOO_VALUE, _BAR_VALUE, _FOO_BAR_VALUE
 - **Local Constants (_ Function**): _VALUE, _TOKEN_VALUE
-- **Global Functions (Module Function)** (não recomendado): FooIsValid, BarExecute
+- **Global Functions (Domain Function)** (não recomendado): FooIsValid, BarExecute
 - **Local Functions (Function)**: IsValid, Execute
 - **Event Properties (On Function)**: OnEdit, OnCalculate
 - **Event Implementations (Do Function)**: DoEdit, DoCalculate
@@ -112,7 +112,7 @@ uses
 - Cada token que compõe o nome da Unidade deve ser separado por "." quando estiver utilizando compiladores mais novos, por exemplo: `acme.bar.model.pas`; para compiladores mais antigos (como Delphi 6 e anteriores), deve-se utilizar PascalCase, por exemplo: `AcmeBarModel.pas`
 
 #### Estrutura de Diretórios
-- Dentro de `src`, existirão diretórios correspondentes a cada Module
+- Dentro de `src`, existirão diretórios correspondentes a cada Domain
 ```
 acme
   bin
